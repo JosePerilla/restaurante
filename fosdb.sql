@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 27-03-2021 a las 16:58:13
+-- Tiempo de generación: 04-04-2021 a las 00:45:17
 -- Versión del servidor: 10.4.18-MariaDB
 -- Versión de PHP: 8.0.3
 
@@ -128,7 +128,11 @@ INSERT INTO `tbl_order` (`orderID`, `status`, `total`, `order_date`) VALUES
 (5, 'Completed', '10000.00', '2020-01-25'),
 (6, 'Completed', '15500.00', '2020-01-25'),
 (7, 'Completed', '6200.00', '2021-03-27'),
-(8, 'Completed', '3600.00', '2021-03-27');
+(8, 'Completed', '3600.00', '2021-03-27'),
+(9, 'Completed', '26000.00', '2021-04-03'),
+(10, 'Completed', '42000.00', '2021-04-03'),
+(11, 'Completed', '9600.00', '2021-04-03'),
+(12, 'waiting', '10000.00', '2021-04-03');
 
 -- --------------------------------------------------------
 
@@ -164,7 +168,12 @@ INSERT INTO `tbl_orderdetail` (`orderID`, `orderDetailID`, `itemID`, `quantity`)
 (6, 14, 36, 1),
 (7, 15, 19, 1),
 (7, 16, 31, 1),
-(8, 17, 31, 3);
+(8, 17, 31, 3),
+(9, 18, 41, 2),
+(9, 19, 44, 1),
+(10, 20, 60, 1),
+(11, 21, 40, 1),
+(12, 22, 49, 1);
 
 -- --------------------------------------------------------
 
@@ -209,7 +218,7 @@ INSERT INTO `tbl_staff` (`staffID`, `username`, `password`, `status`, `role`) VA
 (3, 'Itsuki Nakano', '123456', 'Offline', 'chef'),
 (4, 'Fuutarou', '123456', 'Online', 'Repartidor'),
 (5, 'Yotsuba Nakano', '123456', 'Online', 'Mesero'),
-(6, 'Raiha', '123456', 'Online', 'chef');
+(6, 'Raiha', '123456', 'Online', 'cliente');
 
 --
 -- Índices para tablas volcadas
@@ -274,7 +283,7 @@ ALTER TABLE `tbl_menuitem`
 -- AUTO_INCREMENT de la tabla `tbl_orderdetail`
 --
 ALTER TABLE `tbl_orderdetail`
-  MODIFY `orderDetailID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `orderDetailID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT de la tabla `tbl_staff`
